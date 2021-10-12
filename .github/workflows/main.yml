@@ -21,3 +21,6 @@ jobs:
             - name: Run Python Script
               run: |
                   python "program.py"
+              env: # Or as an environment variable
+                  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
