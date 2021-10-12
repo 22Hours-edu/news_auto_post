@@ -30,7 +30,7 @@ def makePayloadItem(newsItem):
       }
 
 def callWebhook (payload):
-  URL = 'https://hooks.slack.com/services/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' 
+  URL = 'https://hooks.slack.com/services/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' 
   headers = {
     'Content-type' : 'application/json',
   }
