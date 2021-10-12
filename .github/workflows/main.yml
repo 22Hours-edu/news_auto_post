@@ -3,10 +3,8 @@ name: Run Rss Webhook Bots
 #     schedule:
 #         - cron: "0 */6 * * *"      
 on:
-    push:
-      branches: [ master ]
-    pull_request:
-      branches: [ master ]
+  push:
+    branches: [ main ]
 jobs:
     build:
         runs-on: ubuntu-latest
