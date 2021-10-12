@@ -2,6 +2,9 @@ import requests
 import json
 import xmltodict
 import html
+import os
+
+SLACK_WEBHOOK_URL = os.environ.get('SLACK_WEBHOOK_URL')
 
 def makePayloadItem(newsItem):
   return      {
@@ -30,11 +33,10 @@ def makePayloadItem(newsItem):
       }
 
 def callWebhook (payload):
-  URL = 'https://hooks.slack.com/services/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' 
   headers = {
     'Content-type' : 'application/json',
   }
-  res = requests.post(URL, headers=headers, json=payload)
+  res = requests.post(SLACK_WEBHOOK_URL, headers=headers, json=payload)
 
   print(res.text)
 
